@@ -33,6 +33,10 @@ export interface IAuthDocument {
   emailVerificationToken?: string;
   createdAt?: Date;
   updatedAt?: Date;
+  browserName?: string;
+  deviceType?: string;
+  otp?: string;
+  otpExpiration?: Date;
   passwordResetToken?: string;
   passwordResetExpires?: Date;
   comparePassword(password: string): Promise<boolean>;
