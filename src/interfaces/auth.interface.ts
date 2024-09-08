@@ -38,6 +38,8 @@ export interface IAuthDocument {
   otp?: string;
   otpExpiration?: Date;
   passwordResetToken?: string;
+  likedSongs: ILikedSongs[];
+  playlists: IPlaylists[];
   passwordResetExpires?: Date;
   comparePassword(password: string): Promise<boolean>;
   hashPassword(password: string): Promise<string>;
@@ -118,3 +120,18 @@ export interface IAuthUser {
   updatedAt: Date | null;
   username: string | null;
 }
+
+export interface ILikedSongs {
+  id?: number;
+  song?: string;
+  ablum?: string;
+  title?: string;
+}
+
+export interface IPlaylists {
+  id?: number;
+  name?: string;
+  album?: string;
+}
+
+// Path: server/eapp-shared/src/interfaces/song.interface.ts
