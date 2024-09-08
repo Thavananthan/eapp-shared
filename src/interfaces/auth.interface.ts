@@ -38,8 +38,8 @@ export interface IAuthDocument {
   otp?: string;
   otpExpiration?: Date;
   passwordResetToken?: string;
-  likedSongs: ILikedSongs[];
-  playlists: IPlaylists[];
+  likedSongs?: ILikedSongs[];
+  playlists?: IPlaylists[];
   passwordResetExpires?: Date;
   comparePassword(password: string): Promise<boolean>;
   hashPassword(password: string): Promise<string>;
