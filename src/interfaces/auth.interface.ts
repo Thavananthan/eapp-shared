@@ -1,3 +1,4 @@
+import { IMusicDocument, IMusicPlayListDocument } from './music.interface';
 declare global {
   namespace Express {
     interface Request {
@@ -38,8 +39,9 @@ export interface IAuthDocument {
   otp?: string;
   otpExpiration?: Date;
   passwordResetToken?: string;
-  likedSongs?: ILikedSongs[];
-  playlists?: IPlaylists[];
+  likedSongs?: IMusicDocument[];
+  playlists?: IMusicPlayListDocument[];
+  isAdmin?: boolean;
   passwordResetExpires?: Date;
   comparePassword(password: string): Promise<boolean>;
   hashPassword(password: string): Promise<string>;
