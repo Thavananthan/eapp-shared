@@ -70,7 +70,7 @@ export {
   ISellerDocument,
 } from './interfaces/seller.interface';
 export { IEmailLocals } from './interfaces/email.interface';
-export { uploads, videoUpload } from './cloudinary-upload';
+export { uploads, videoUpload, audioUpload } from './cloudinary-upload';
 export {
   IErrorResponse,
   IError,
