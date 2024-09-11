@@ -91,3 +91,8 @@ export {
   isEmail,
   isDataURL,
 } from './helpers';
+
+export {
+  IMusicDocument,
+  IMusicPlayListDocument,
+} from './interfaces/music.interface';
