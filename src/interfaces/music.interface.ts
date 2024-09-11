@@ -16,6 +16,7 @@ export interface IMusicDocument {
   likes?: number;
   plays?: number;
   downloads?: number;
+  toJSON?: () => unknown;
 }
 
 export interface IMusicPlayListDocument {
