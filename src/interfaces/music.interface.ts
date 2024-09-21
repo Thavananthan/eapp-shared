@@ -4,6 +4,7 @@ export interface IMusicDocument {
   _id?: string | ObjectId;
   title: string;
   artist: IArtists[];
+  music_director: IArtists;
   album: IMusicAlbum;
   year: string;
   genre: string;
