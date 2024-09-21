@@ -5,7 +5,7 @@ export interface IMusicDocument {
   title: string;
   artist: IArtists[];
   music_director: IArtists;
-  album: IMusicAlbum;
+  album?: IMusicAlbum;
   year: string;
   genre: string;
   duration: string;
@@ -26,7 +26,7 @@ export interface IMusicAlbum {
   description: string;
   year: string;
   cover?: string;
-  songs: IMusicDocument[];
+  songs?: IMusicDocument[];
   createdAt?: Date | string;
   updatedAt?: Date | string;
   toJSON?: () => unknown;
