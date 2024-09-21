@@ -3,8 +3,8 @@ import { ObjectId } from 'mongoose';
 export interface IMusicDocument {
   _id?: string | ObjectId;
   title: string;
-  artist: string;
-  album: string;
+  artist: IArtists[];
+  album: IMusicAlbum;
   year: string;
   genre: string;
   duration: string;
@@ -19,14 +19,27 @@ export interface IMusicDocument {
   toJSON?: () => unknown;
 }
 
-export interface IMusicPlayListDocument {
+export interface IMusicAlbum {
   _id?: string | ObjectId;
   title: string;
   description: string;
+  year: string;
   cover?: string;
   songs: IMusicDocument[];
   createdAt?: Date | string;
   updatedAt?: Date | string;
+  toJSON?: () => unknown;
+}
+
+export interface IArtists {
+  _id?: string | ObjectId;
+  name: string;
+  title: string;
+  description: string;
+  profile?: string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  toJSON?: () => unknown;
 }
 
 export interface IMusicResponse {

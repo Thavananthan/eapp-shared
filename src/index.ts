@@ -94,5 +94,6 @@ export {
 
 export {
   IMusicDocument,
-  IMusicPlayListDocument,
+  IMusicAlbum,
+  IArtists,
 } from './interfaces/music.interface';
