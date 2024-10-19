@@ -20,6 +20,7 @@ export interface IAuth {
   email?: string;
   country?: string;
   profilePicture?: string;
+  isAdmin?: boolean;
 }
 
 export interface IAuthDocument {
@@ -121,6 +122,7 @@ export interface IAuthUser {
   profilePicture: string | null;
   updatedAt: Date | null;
   username: string | null;
+  isAdmin?: boolean;
 }
 
 export interface ILikedSongs {
