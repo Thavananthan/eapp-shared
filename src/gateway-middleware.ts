@@ -11,6 +11,7 @@ const tokens: string[] = [
   'message',
   'order',
   'review',
+  'songs',
 ];
 
 export function verifyGatewayRequest(
