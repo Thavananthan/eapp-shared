@@ -12,6 +12,7 @@ export interface IAuthPayload {
   username: string;
   email: string;
   iat?: number;
+  isAdmin?: boolean;
 }
 
 export interface IAuth {
